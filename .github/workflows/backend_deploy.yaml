@@ -1,3 +1,4 @@
+# Fork activation: retain manual deployment workflow.
 name: Deploy Backend
 
 on:
