@@ -47,8 +47,8 @@ jobs:
 
       - name: Ensure Cloudflare Pages project exists
         run: |
-          PROJECT_NAME=$(sed -n 's/^name = "\(.*\)"$/\1/p' ../pages/wrangler.toml | head -n1)
-          npx wrangler pages project create "$PROJECT_NAME" --production-branch production || true
+          PROJECT_NAME=$(sed -n 's/^name = "\(.*\)"$/\1/p' pages/wrangler.toml | head -n1)
+          npx wrangler pages project create "$PROJECT_NAME" --production-branch production
 
       - name: Deploy Frontend for ${{ github.ref_name }}
         run: |
